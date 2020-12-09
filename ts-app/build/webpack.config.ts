@@ -1,6 +1,7 @@
-import webpack from 'webpack';
-import * as nodeExternals from 'webpack-node-externals';
 import * as path from 'path';
+import webpack from 'webpack';
+import * as ESLintPlugin from 'eslint-webpack-plugin';
+import * as nodeExternals from 'webpack-node-externals';
 
 const rootDir = path.resolve(__dirname, '../');
 
@@ -13,12 +14,6 @@ export default {
       {
         test: /\.tsx?$/,
         use: 'ts-loader'
-      },
-      {
-        test: /\.(js|tsx?)$/,
-        loader: 'eslint-loader',
-        enforce: "pre",
-        include: [path.join(rootDir, 'src')]
       }
     ]
   },
@@ -32,5 +27,6 @@ export default {
     filename: 'app.js',
     path: path.join(rootDir, 'dist')
   },
-  externals: [nodeExternals()]
+  plugins: [new (ESLintPlugin as any)()],
+  externals: [nodeExternals() as any]
 } as webpack.Configuration;
