@@ -19,7 +19,7 @@ module.exports = {
   },
   "rules": {
     "semi": [2, "always"],
-    // "global-require": 1,//使用import代替require
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
