@@ -1,0 +1,12 @@
+{
+    "editor.tabSize": 2,
+    "files.autoGuessEncoding": false,
+    "files.trimTrailingWhitespace": true,
+    "files.encoding": "utf8",
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ]
+}

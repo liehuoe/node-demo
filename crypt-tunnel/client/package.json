@@ -1,0 +1,39 @@
+{
+  "name": "agent-client",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "debug": "nodemon --ext ts,tsx --exec node -r ts-node/register --nolazy src/app.ts",
+    "build": "webpack --config build/webpack.config.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "module-alias": "*"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "@types/webpack-node-externals": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-webpack-plugin": "*",
+    "nodemon": "*",
+    "prettier": "*",
+    "ts-loader": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-node-externals": "*"
+  },
+  "_moduleAliases": {
+    "@": "src"
+  },
+  "_moduleDirectories": [
+    "node_modules_custom"
+  ]
+}
