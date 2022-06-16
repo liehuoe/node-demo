@@ -1,3 +1,4 @@
-import 'module-alias/register';
-
-console.log('hello');
+function main() {
+  console.log("hello");
+}
+main();

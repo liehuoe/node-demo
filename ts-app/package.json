@@ -4,33 +4,28 @@
   "description": "typescript+webpack demo",
   "private": true,
   "scripts": {
-    "debug": "nodemon --ext ts,tsx --exec node -r ts-node/register --nolazy src/app.ts",
+    "debug": "cross-env NODE_ENV=development nodemon --ext ts,tsx --exec node -r ts-node/register -r tsconfig-paths/register --nolazy src/app.ts",
     "build": "webpack --config build/webpack.config.ts"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "module-alias": "*"
-  },
   "devDependencies": {
-    "@types/node": "*",
-    "@types/webpack-node-externals": "*",
+    "@types/node": "^16.11.39",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "cross-env": "*",
     "eslint": "*",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-webpack-plugin": "*",
     "nodemon": "*",
+    "prettier": "^2.6.2",
     "ts-loader": "*",
     "ts-node": "*",
+    "tsconfig-paths": "*",
+    "tsconfig-paths-webpack-plugin": "*",
     "typescript": "*",
     "webpack": "*",
-    "webpack-cli": "*",
-    "webpack-node-externals": "*"
-  },
-  "_moduleAliases": {
-    "@": "src"
-  },
-  "_moduleDirectories": [
-    "node_modules_custom"
-  ]
+    "webpack-cli": "*"
+  }
 }
